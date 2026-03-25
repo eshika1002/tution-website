@@ -3,7 +3,7 @@
 <head>
     <title>Bright Future Tuition Classes</title>
 
-    <!-- Google Font -->
+    <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
@@ -11,38 +11,63 @@
 
 <body>
 
+<!-- HERO -->
 <header>
     <h1>Bright Future Tuition Classes</h1>
     <p>From 1st to 12th | JEE | NEET Preparation</p>
 </header>
 
+<!-- SUBJECTS (CLICKABLE) -->
 <section>
     <h2>Subjects We Offer</h2>
 
-    <h3>1st to 5th</h3>
-    <p>All Subjects</p>
+    <button class="accordion">1st to 5th</button>
+    <div class="panel">
+        <p>All Subjects</p>
+    </div>
 
-    <h3>6th to 10th</h3>
-    <p>Maths, Science, English, SST</p>
+    <button class="accordion">6th to 10th</button>
+    <div class="panel">
+        <p>Maths, Science, English, SST</p>
+    </div>
 
-    <h3>11th & 12th</h3>
-    <p>Physics, Chemistry, Maths, Biology</p>
+    <button class="accordion">11th & 12th</button>
+    <div class="panel">
+        <p>Physics, Chemistry, Maths, Biology</p>
+    </div>
 
-    <h3>Competitive Exams</h3>
-    <p>JEE (Main + Advanced), NEET</p>
+    <button class="accordion">JEE / NEET</button>
+    <div class="panel">
+        <p>Full preparation for competitive exams</p>
+    </div>
 </section>
 
+<!-- FEES -->
 <section>
-    <h2>Why Choose Us?</h2>
-    <ul>
-        <li>Experienced Teachers</li>
-        <li>Small Batch Size</li>
-        <li>Regular Tests</li>
-        <li>Personal Attention</li>
-    </ul>
+    <h2>Fees Structure</h2>
+
+    <button class="accordion">1st to 5th Fees</button>
+    <div class="panel">
+        <p>₹1500 / month</p>
+    </div>
+
+    <button class="accordion">6th to 10th Fees</button>
+    <div class="panel">
+        <p>₹2500 / month</p>
+    </div>
+
+    <button class="accordion">11th & 12th Fees</button>
+    <div class="panel">
+        <p>₹3500 / month</p>
+    </div>
+
+    <button class="accordion">JEE / NEET Fees</button>
+    <div class="panel">
+        <p>₹5000 / month</p>
+    </div>
 </section>
 
-<!-- STUDENT GALLERY -->
+<!-- STUDENTS -->
 <section>
     <h2>Our Students</h2>
     <div class="gallery">
@@ -50,12 +75,6 @@
         <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e">
         <img src="https://images.unsplash.com/photo-1584697964190-7383c72d0c4b">
     </div>
-</section>
-
-<!-- BOOK BACKGROUND -->
-<section class="book-section">
-    <h2>Focused Learning Environment</h2>
-    <p>We provide the best study materials and environment for success.</p>
 </section>
 
 <!-- FORM -->
@@ -67,7 +86,7 @@
         <input type="text" placeholder="Class" required>
         <input type="text" placeholder="Subject" required>
         <input type="tel" placeholder="Phone Number" required>
-        
+
         <button type="submit">Submit</button>
     </form>
 </section>
@@ -75,6 +94,24 @@
 <footer>
     <p>Contact: 9876543210 | Pune</p>
 </footer>
+
+<!-- JS FOR CLICKABLE -->
+<script>
+    let acc = document.getElementsByClassName("accordion");
+
+    for (let i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            let panel = this.nextElementSibling;
+
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+</script>
 
 </body>
 </html>

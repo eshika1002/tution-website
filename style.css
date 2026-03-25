@@ -1,10 +1,10 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #eef2f3, #ffffff);
+    background-color: #f5efe6; /* BEIGE */
 }
 
-/* HERO */
+/* HEADER */
 header {
     background: url('https://images.unsplash.com/photo-1588072432836-e10032774350') center/cover;
     color: white;
@@ -25,84 +25,87 @@ header h1, header p {
     z-index: 1;
 }
 
-header h1 {
-    font-size: 42px;
-}
-
-header p {
-    font-size: 18px;
-}
-
 /* SECTION */
 section {
-    background: white;
-    margin: 30px;
-    padding: 25px;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-/* BOOK SECTION */
-.book-section {
-    background: url('https://images.unsplash.com/photo-1512820790803-83ca734da794') center/cover;
-    color: white;
+    background: #fffaf3;
+    margin: 25px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
 /* HEADINGS */
 h2 {
-    color: #4a90e2;
+    color: #6b4f3b;
 }
 
-/* LIST */
-ul {
-    padding-left: 20px;
+/* ACCORDION */
+.accordion {
+    background: #d6c3a3;
+    color: #333;
+    cursor: pointer;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    margin-top: 10px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.accordion:hover {
+    background: #c2a77f;
+}
+
+.panel {
+    display: none;
+    padding: 10px;
+    background: #f3e9dc;
+    border-radius: 8px;
 }
 
 /* FORM */
 form {
     display: flex;
     flex-direction: column;
-    max-width: 350px;
+    max-width: 300px;
 }
 
 input {
     margin: 10px 0;
-    padding: 12px;
-    border-radius: 10px;
+    padding: 10px;
+    border-radius: 8px;
     border: 1px solid #ccc;
 }
 
 /* BUTTON */
 button {
-    background: linear-gradient(to right, #4a90e2, #6a11cb);
+    background: #6b4f3b;
     color: white;
-    padding: 12px;
+    padding: 10px;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 16px;
 }
 
 button:hover {
-    transform: scale(1.05);
+    background: #4e3a2c;
 }
 
 /* GALLERY */
 .gallery {
     display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .gallery img {
     width: 30%;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
-    background: #4a90e2;
+    background: #6b4f3b;
     color: white;
-    padding: 15px;
+    padding: 10px;
 }
